@@ -1,9 +1,11 @@
 #!/bin/sh
-cd ~/<Project directory>
+cd /home/bitnami/website
 echo "cd into "
 echo $PWD
 git pull
 echo "repo updated"
-yarn install
+npm install
 echo "installed"
-pm2 restart index.js
+forever stop server.js
+forever start server.js
+sudo /opt/bitnami/ctlscript.sh restart apache

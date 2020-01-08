@@ -1,4 +1,4 @@
-const webhookSecret='17zwEfyoXZf7hA1BnCUHsfNpFeW3ETYyeg';
+const webhookSecret='/rHoXl+GGvaH/+xSpMW5';
 
 
 const express = require('express');
