@@ -1,4 +1,5 @@
 #!/bin/sh
+{
 cd /home/bitnami/website
 echo "cd into "
 echo $PWD
@@ -9,3 +10,4 @@ echo "installed"
 forever stop server.js
 forever start server.js
 sudo /opt/bitnami/ctlscript.sh restart apache
+} > log.txt

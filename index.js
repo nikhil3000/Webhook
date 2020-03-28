@@ -39,7 +39,8 @@ app.post('/payload', (req, res) => {
 
   if (req.headers['x-hub-signature'] == sig) {
     try {
-      exec('~/./deploy.sh')
+      exec('/home/bitnami/Webhook/deploy.sh')
+      log.info('deployed')
     } catch (e) {
       log.error(e)
     }
